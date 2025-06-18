@@ -1,0 +1,22 @@
+[package]
+name = "wisp-node"
+description = "A node implementation for the Wisp blockchain, handling peer connections, block validation, and transaction processing."
+include = ["src/**/*", "README.md"]
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+
+[dependencies]
+anyhow = "1.0.97"
+argh = "0.1.13"
+chrono = "0.4.40"
+dashmap = "6.1.0"
+lazy_static = "1.5.0"
+log = "0.4.27"
+static_init = "1.0.3"
+tokio = { version = "1.44.1", features = ["full"] }
+uuid = { version = "1.16.0", features = ["v4"] }
+wisp-core = { path = "../wisp-core" }
